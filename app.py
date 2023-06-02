@@ -51,10 +51,11 @@ def wikipedia():
             
 #ログアウトページ
 def logout():
-    if st.confirm('ログアウトしてもよろしいですか？', show_cancel_button=False):
+    if st.confirm('ログアウトしてもよろしいですか？', False):
         st.session_state.login = False
         st.session_state.logout = True  # ログアウト状態をTrueに設定
         st.success('ログアウトしました')
+
 
 
 #メインページ
