@@ -15,7 +15,7 @@ def login():
             if password == id_pwd[user_id]:
                 st.success('ログインに成功しました')
                 st.session_state.login = True  # ログイン状態をTrueに設定
-                main()  # main()関数を再度呼び出す
+                st.experimental_rerun()  # main()関数を再度実行
             else:
                 st.error('パスワードが間違っています')
         else:
