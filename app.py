@@ -15,11 +15,11 @@ def login():
             if password == id_pwd[user_id]:
                 st.success('ログインに成功しました')
                 st.session_state.login = True  # ログイン状態をTrueに設定
+                main()  # main()関数を再度呼び出す
             else:
                 st.error('パスワードが間違っています')
         else:
             st.error('ユーザーIDが間違っています')
-
 
 #クイズページ
 def pref_quiz():
