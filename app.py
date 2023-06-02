@@ -48,6 +48,14 @@ def wikipedia():
         else:
             result = wiki(word)
             st.write(result)
+            
+#ログアウトページ
+def logout():
+    if st.confirm('ログアウトしてもよろしいですか？', show_cancel_button=False):
+        st.session_state.login = False
+        st.session_state.logout = True  # ログアウト状態をTrueに設定
+        st.success('ログアウトしました')
+
 
 #メインページ
 def main():
@@ -68,8 +76,7 @@ def main():
         elif choice == 'Wikipedia検索':
             wikipedia()
         elif choice == 'ログアウト':
-            st.session_state.login = False
-            st.success('ログアウトしました')
+            logout()
 
 if __name__ == '__main__':
     main()
