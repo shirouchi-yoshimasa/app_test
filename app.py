@@ -3,7 +3,7 @@ from pref_question import pref_location
 from wiki import wiki
 
 #ログイン情報
-id_pwd = {'lelouch': 'vermillion'}
+id_pwd = {'test': 'test'}
 
 #ログインページ
 def login():
