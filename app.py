@@ -51,8 +51,8 @@ def wikipedia():
 
 #メインページ
 def main():
-    st.set_page_config(page_title='都道府県クイズアプリ', page_icon=':memo:', layout='wide')
-    st.title('都道府県クイズアプリ')
+    st.set_page_config(page_title='Webアプリ', page_icon=':memo:', layout='wide')
+    st.title('Webアプリ')
     if 'login' not in st.session_state:
         st.session_state.login = False
     if not st.session_state.login:
