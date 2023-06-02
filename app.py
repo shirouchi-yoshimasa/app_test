@@ -6,6 +6,7 @@ from wiki import wiki
 id_pwd = {'lelouch': 'vermillion'}
 
 #ログインページ
+#ログインページ
 def login():
     st.title('ログイン')
     user_id = st.text_input('ユーザーID')
@@ -14,12 +15,12 @@ def login():
         if user_id in id_pwd:
             if password == id_pwd[user_id]:
                 st.success('ログインに成功しました')
-                return True
+                st.session_state.login = True  # ログイン状態をTrueに設定
             else:
                 st.error('パスワードが間違っています')
         else:
             st.error('ユーザーIDが間違っています')
-    return False
+
 
 #クイズページ
 def pref_quiz():
