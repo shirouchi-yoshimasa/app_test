@@ -6,7 +6,6 @@ from wiki import wiki
 id_pwd = {'lelouch': 'vermillion'}
 
 #ログインページ
-#ログインページ
 def login():
     st.title('ログイン')
     user_id = st.text_input('ユーザーID')
